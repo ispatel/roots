@@ -26,4 +26,4 @@ url = page.url
 #print(data[value])
 
 def summarizePlace(name):
-    return (url, wikipedia.summary(name))
+    return (wikipedia.page(name).url, wikipedia.summary(name))
