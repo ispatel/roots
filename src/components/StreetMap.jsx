@@ -13,7 +13,7 @@ function StreetMap({addr}) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const key = 'AIzaSyB3eiU-iZ06emJ4rDDW8G8mEDS5fD6zn9Q';
+  const key = process.env.REACT_APP_API_KEY;
 
 
   useEffect(() => {
