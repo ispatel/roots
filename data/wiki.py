@@ -31,6 +31,7 @@ else:
     print("No image with the class 'mw-file-element' found on the page.")
 
 new = re.sub(r'[0-9]+px', '600px', first_image_url)
+new = "https:" + new
 print(new)
 
 
