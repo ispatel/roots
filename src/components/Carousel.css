@@ -1,11 +1,17 @@
-.left { 
-    float: left; 
-    width: 50%; 
+.left {
+    float: left;
+    width: 50%;
     text-align: center;
-  } 
-   
-  .right { 
-    float: right; 
-    width: 50%; 
+}
+
+.right {
+    float: right;
+    width: 50%;
     text-align: center;
-  } 
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 4vw !important;
+    height: 4vw !important;
+}

@@ -38,10 +38,10 @@
         "city": "New York",
         "places": [
           {
-            "name": "placeName1-New York",
-            "imageUrl": "imageUrl1",
-            "wikiUrl": "wikiUrl1",
-            "description": "description1"
+            "name": "Pope House Museum",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Pope_House.jpg/600px-Pope_House.jpg",
+            "wikiUrl": "https://github.com/ispatel/roots/pulse",
+            "description": "The Pope House Museum, built in 1901, is a restored home once owned by Dr. Manassa Thomas Pope, a prominent African-American citizen of Raleigh, North Carolina. The Pope House is listed on the National Register of Historic Places in 1999, It was an official project of the Save America’s Treasures Program and the city of Raleigh took over management of it, offering tours for the first time in 2012."
           },
           {
             "name": "placeName2-New York",
