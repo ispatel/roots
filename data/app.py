@@ -15,13 +15,6 @@ def summarize():
     data = None
     if os.path.getsize("data.json") > 0:
         with open("data.json", 'r') as f:
-            # f.seek(0)
-            # first_char = f.read(1)
-            # if not first_char:
-            #     f.write("[\n\n]")
-            #     f.seek(0)
-            # else:
-            #     f.seek(0)
             data = json.load(f)
     else:
         data = []
