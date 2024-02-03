@@ -16,8 +16,6 @@ root.render(
         addr="326 Stonehouse Drive, Apex, NC"
       />
     </LoadScript>
-    {/* <MyMap /> */}
-    {/* <StreetView /> */}
   </>
 
 );
