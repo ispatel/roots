@@ -30,6 +30,6 @@ def getImgUrl(name, url):
         print("No image with the class 'mw-file-element' found on the page.")
         return "none"
 
-    return re.sub(r'[0-9]+px', '600px', first_image_url)
+    return "https:" + re.sub(r'[0-9]+px', '600px', first_image_url)
 
 
