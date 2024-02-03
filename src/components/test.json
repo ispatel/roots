@@ -1,0 +1,37 @@
+[
+    {
+      "city": "cityName",
+      "places": [
+        {
+          "name": "placeName1",
+          "imageUrl": "imageUrl1",
+          "wikiUrl": "wikiUrl1",
+          "description": "description1"
+        },
+        {
+          "name": "placeName2",
+          "imageUrl": "imageUrl2",
+          "wikiUrl": "wikiUrl2",
+          "description": "description2"
+        },
+        {
+          "name": "placeName3",
+          "imageUrl": "imageUrl3",
+          "wikiUrl": "wikiUrl3",
+          "description": "description3"
+        },
+        {
+          "name": "placeName4",
+          "imageUrl": "imageUrl4",
+          "wikiUrl": "wikiUrl4",
+          "description": "description4"
+        },
+        {
+          "name": "placeName5",
+          "imageUrl": "imageUrl5",
+          "wikiUrl": "wikiUrl5",
+          "description": "description5"
+        }
+      ]
+    }
+  ]

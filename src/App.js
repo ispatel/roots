@@ -1,37 +1,18 @@
 import './App.css';
 
 import React, { useState } from 'react';
-import { Container, Dropdown, DropdownButton } from 'react-bootstrap';
-import MainCarousel from './Carousel';
-
-const cities = ['New York', 'London', 'Paris', 'Tokyo', 'Sydney'];
-
-
+import MainCarousel from './components/Carousel';
+import Navbar from './components/Navbar';
 
 function App() {
-  const [city, setSelectedCity] = useState('');
 
-  const handleCityChange = (city) => {
-    setSelectedCity(city);
-  };
+  const [selectedCity, setSelectedCity] = useState(null);
+
 
   return (
     <div>
-      <h1>Name</h1>
-      <Container>
-        <DropdownButton id="dropdown-basic-button" title={city || "Select a City!"}>
-        {cities.map((city, index) => {
-          return (
-            <Dropdown.Item key={index} onClick={() => handleCityChange(city)}>
-              {city}
-            </Dropdown.Item>
-          );
-        })}
-      </DropdownButton>
-      </Container>
-      <br></br>
-      <p>Selected City: {city}</p>
-      <MainCarousel></MainCarousel>
+      <Navbar onCitySelect={setSelectedCity}></Navbar>
+      <MainCarousel city={selectedCity}></MainCarousel>
     </div>
   );
 }
