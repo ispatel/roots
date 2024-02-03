@@ -3,21 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { LoadScript, GoogleMap, Map } from '@react-google-maps/api';
-import StreetMap from './components/StreetMap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const key = process.env.REACT_APP_API_KEY;
-const lib = ["places"];
+
 
 root.render(
   <>
-    <LoadScript googleMapsApiKey={key} libraries={lib}>
-      <StreetMap 
-        addr="326 Stonehouse Drive, Apex, NC"
-      />
-    </LoadScript>
     <App />
   </>
 
