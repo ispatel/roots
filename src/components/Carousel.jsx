@@ -1,57 +1,32 @@
-import { useState } from "react";
-import Carousel from "react-bootstrap/Carousel";
+import React, { useState } from 'react';
+import Carousel from 'react-bootstrap/Carousel';
+import data from './test.json';
 
 function MainCarousel({ city }) {
-    const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0);
 
-    const handleSelect = (selectedIndex) => {
-        setIndex(selectedIndex);
-    };
+  const handleSelect = (selectedIndex) => {
+    setIndex(selectedIndex);
+  };
 
-    return (
-        <Carousel activeIndex={index} onSelect={handleSelect} interval={null}>
-            <Carousel.Item>
-                <div
-                    className="d-block w-100"
-                    style={{ backgroundColor: "#300", height: "93vh" }}
-                />
-                <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <h3>{city}</h3>
-                    <p>
-                        Nulla vitae elit libero, a pharetra augue mollis
-                        interdum.
-                    </p>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <div
-                    className="d-block w-100"
-                    style={{ backgroundColor: "#300", height: "93vh" }}
-                />
-                <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>
-                        Nulla vitae elit libero, a pharetra augue mollis
-                        interdum.
-                    </p>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <div
-                    className="d-block w-100"
-                    style={{ backgroundColor: "#300", height: "93vh" }}
-                />
-                <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>
-                        Nulla vitae elit libero, a pharetra augue mollis
-                        interdum.
-                    </p>
-                </Carousel.Caption>
-            </Carousel.Item>
-        </Carousel>
-    );
+  const cityData = city ? data.find(item => item.city === city) : null;
+
+  return (
+    <Carousel activeIndex={index} onSelect={handleSelect} interval={null}>
+      {cityData && cityData.places.map((place, index) => (
+        <Carousel.Item key={index}>
+          <div
+            className="d-block w-100"
+            style={{ backgroundColor: "#300", height: "93vh" }}
+          />
+          <Carousel.Caption>
+            <h3>{place.name}</h3>
+            <p>{place.description}</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      ))}
+    </Carousel>
+  );
 }
 
 export default MainCarousel;

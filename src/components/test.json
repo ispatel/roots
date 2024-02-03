@@ -1,37 +1,72 @@
 [
     {
-      "city": "cityName",
+      "city": "Tokyo",
       "places": [
         {
-          "name": "placeName1",
+          "name": "placeName1-Tokyo",
           "imageUrl": "imageUrl1",
           "wikiUrl": "wikiUrl1",
           "description": "description1"
         },
         {
-          "name": "placeName2",
+          "name": "placeName2-Tokyo",
           "imageUrl": "imageUrl2",
           "wikiUrl": "wikiUrl2",
           "description": "description2"
         },
         {
-          "name": "placeName3",
+          "name": "placeName3-Tokyo",
           "imageUrl": "imageUrl3",
           "wikiUrl": "wikiUrl3",
           "description": "description3"
         },
         {
-          "name": "placeName4",
+          "name": "placeName4-Tokyo",
           "imageUrl": "imageUrl4",
           "wikiUrl": "wikiUrl4",
           "description": "description4"
         },
         {
-          "name": "placeName5",
+          "name": "placeName5-Tokyo",
           "imageUrl": "imageUrl5",
           "wikiUrl": "wikiUrl5",
           "description": "description5"
         }
       ]
-    }
+    }, 
+    {
+        "city": "New York",
+        "places": [
+          {
+            "name": "placeName1-New York",
+            "imageUrl": "imageUrl1",
+            "wikiUrl": "wikiUrl1",
+            "description": "description1"
+          },
+          {
+            "name": "placeName2-New York",
+            "imageUrl": "imageUrl2",
+            "wikiUrl": "wikiUrl2",
+            "description": "description2"
+          },
+          {
+            "name": "placeName3-New York",
+            "imageUrl": "imageUrl3",
+            "wikiUrl": "wikiUrl3",
+            "description": "description3"
+          },
+          {
+            "name": "placeName4-New York",
+            "imageUrl": "imageUrl4",
+            "wikiUrl": "wikiUrl4",
+            "description": "description4"
+          },
+          {
+            "name": "placeName5-New York",
+            "imageUrl": "imageUrl5",
+            "wikiUrl": "wikiUrl5",
+            "description": "description5"
+          }
+        ]
+      }
   ]
