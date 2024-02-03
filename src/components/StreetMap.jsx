@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { GoogleMap, StreetViewPanorama, useJsApiLoader } from "@react-google-maps/api";
 import axios from 'axios';
 
-function StreetMap({addr}) {
+function StreetMap({addr, height, width}) {
   const containerStyle = {
-    height: "800px",
-    width: "800px"
+    width: width,
+    height: height,
   };
 
   
