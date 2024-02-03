@@ -1,23 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
 
+import React, { useState } from 'react';
+import { Container, Dropdown } from 'react-bootstrap';
+
+const cities = ['New York', 'London', 'Paris', 'Tokyo', 'Sydney'];
+
+
+
 function App() {
+  const [selectedCity, setSelectedCity] = useState();
+
+  const handleCityChange = (city) => {
+    setSelectedCity(city);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Name</h1>
+      <Container>
+        <Dropdown onChange={handleCityChange}>
+          <Dropdown.Toggle id="dropdown-basic">
+            {selectedCity}
+          </Dropdown.Toggle>
+
+          <Dropdown.Menu>
+            {cities.map((city, index) => (
+              <Dropdown.Item onSelect={() => handleCityChange(city)}>
+                {city}
+              </Dropdown.Item>
+            ))}
+          </Dropdown.Menu>
+        </Dropdown>
+      </Container>
+      <br></br>
+      <p>Selected City: {selectedCity}</p>
     </div>
   );
 }
