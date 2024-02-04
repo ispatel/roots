@@ -1,5 +1,5 @@
 import "./Carousel.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import data from "./test.json";
 import { LoadScript } from "@react-google-maps/api";
@@ -11,6 +11,11 @@ const lib = ["places"];
 
 function MainCarousel({ city }) {
     const [index, setIndex] = useState(0);
+    const [hover, setHover] = useState(false);
+
+    useEffect(() => {
+        setIndex(0);
+    }, [city]);
     const handleSelect = (selectedIndex) => {
         setIndex(selectedIndex);
     };
@@ -22,8 +27,11 @@ function MainCarousel({ city }) {
                 cityData.places.map((place, i) => (
                     <Carousel.Item key={i}>
                         <div
-                            className="d-block w-100"
-                            style={{ backgroundColor: "#300", height: "93vh" }}
+                            className="d-block w-100 scrollable-content"
+                            style={{
+                                backgroundColor: "#333",
+                                height: "93vh",
+                            }}
                         >
                             <Container>
                                 <Row>
@@ -45,6 +53,7 @@ function MainCarousel({ city }) {
                                             style={{ padding: "20px" }}
                                         >
                                             <img
+                                                className="shadowed-image"
                                                 src={place.imageUrl}
                                                 alt="African Burial Ground, NYC"
                                                 width={"100%"}
@@ -63,6 +72,7 @@ function MainCarousel({ city }) {
                                                     libraries={lib}
                                                 >
                                                     <StreetMap
+                                                        className="shadowed-image"
                                                         addr={`${place.name}, ${place.city}`}
                                                         height={
                                                             window.innerHeight /
@@ -77,11 +87,13 @@ function MainCarousel({ city }) {
                                 </Row>
                                 <Row className="justify-content-md-center text-center">
                                     <a
+                                        onMouseEnter={() => setHover(true)}
+                                        onMouseLeave={() => setHover(false)}
                                         href={place.wikiUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         style={{
-                                            color: "gold",
+                                            color: hover ? 'blue' : 'gold',
                                             fontStyle: "italic",
                                             fontSize: "3vh",
                                             fontFamily: "Arial",

@@ -15,3 +15,17 @@
     width: 4vw !important;
     height: 4vw !important;
 }
+
+.shadowed-component {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.scrollable-content {
+  overflow-y: auto;
+  max-height: 93vh;
+}
+
+a:hover {
+  color: rgb(88, 88, 219);
+}

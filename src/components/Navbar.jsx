@@ -18,7 +18,7 @@ function Navbar({ onCitySelect }) {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",
-                backgroundColor: "#333",
+                backgroundColor: "#222",
                 color: "white",
                 padding: "25px",
                 height: "8vh",
