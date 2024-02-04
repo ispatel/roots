@@ -5,6 +5,7 @@ import data from "../data.json";
 import { LoadScript } from "@react-google-maps/api";
 import StreetMap from "./StreetMap";
 import { Container, Col, Row } from "react-bootstrap";
+import logo from './logo.png'
 
 const key = process.env.REACT_APP_API_KEY;
 const lib = ["places"];
@@ -19,6 +20,24 @@ function MainCarousel({ city }) {
     const handleSelect = (selectedIndex) => {
         setIndex(selectedIndex);
     };
+
+    if (!city) {
+        return (
+            <div className="d-block w-100 scrollable-content" style={{backgroundColor: "#333", height: "93vh"}}>
+                <img src={logo} alt="rename test" style={{
+                    display: 'block', 
+                    marginLeft: 'auto', 
+                    marginRight: 'auto', 
+                    marginTop: window.innerHeight / 10,
+                    width: '50%',
+                    height: 'auto'
+                }}
+                />
+                <h1 style={{display: 'block', textAlign: 'center'}}>Explore Landmarks Near You!</h1>
+            </div>
+        )
+    }
+
     const cityData = city ? data.find((item) => item.city === city) : null;
 
     return (
