@@ -15,8 +15,8 @@ def summarize():
     wikiUrl = getUrl(n)
     imgUrl = getImgUrl(n, wikiUrl)
     data = None
-    if os.path.getsize("data.json") > 0:
-        with open("data.json", 'r') as f:
+    if os.path.getsize("../src/data.json") > 0:
+        with open("../src/data.json", 'r') as f:
             data = json.load(f)
     else:
         data = []
@@ -29,8 +29,8 @@ def summarize():
             break
     if not flag:
         data.append({"city": city, "places": [{"name": n, "description": summary, "wikiUrl": wikiUrl, "imageUrl": imgUrl}]})
-    os.remove("data.json")
-    with open("data.json", "w") as f:
+    os.remove("../src/data.json")
+    with open("../src/data.json", "w") as f:
         json.dump(data, f, indent=2)
         
     return jsonify({"name": n, "description": summary, "wikiUrl": wikiUrl, "imageUrl": imgUrl})
