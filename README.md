@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+## Inspiration
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Our team believes that the most important part of culture preservation relies on education.
+Throughout the years, numerous monumental figures and events have occurred that many of
+our peers are not aware about, simply due to the lack of education they receive on these
+events. This is even more prevalent with Black Culture - a culture so rich in history in
+this country which deserves a spotlight among our society. With this project we aim to 
+provide the most immersive experience to explore important landmarks in Black Culture. Our
+app, called "ROOTS", aims to uncover important landmarks that make up the roots of our 
+society today.
 
-## Available Scripts
+## What it does
 
-In the project directory, you can run:
+With our web application, users are able to view important cultural landmarks in various
+cities by scrolling through the carousel. An image relevant to the landmark shows up 
+on the left, while an incredibly interactive street view panoramic is placed next to it.
+Users can look around this view and move throughout the virtual environment to gain a 
+more immersive experience than just viewing images or reading text. Below these, we have
+a detailed description of relevant facts along with a link to learn more about the 
+landmark. Additionally, users can add their own landmarks they recognize as important
+to Black Culture by simply entering the name and city of the landmark, while our app
+does the hard work and retrieves all the information automatically!
 
-### `npm start`
+## How we built it
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The frontend of our app was built in Javascript using React. We have our backend components
+written in Python using Flask. We used multiple APIs in this process, including Google Maps
+to obtain an interactive street view and a Wikipedia API to automatically gather relevant 
+information and images.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Challenges we ran into
 
-### `npm test`
+We ran into many challenges at first interfacing with the Google Maps API since authentication
+and embedding it into a React component proved to be difficult. Additionally, our API calls from 
+the client side ran into network errors at first due to some rendering issues.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Accomplishments that we're proud of
 
-### `npm run build`
+We managed to push past the aforementioned problems by researching rendering techniques and 
+pulling our past experience to target the problems at hand. We are proud of how effeciently 
+we were able to interface with the APIs we use to push the effort off of the user and 
+onto our app.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## What we learned
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+We all learned a lot about React, Flask, and interfacing with Cloud APIs.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## What's next for ROOTS
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+We would really like to implement a language translation feature for our text in ROOTS to 
+increase its reach to a wider audience, therefore increasing education.
