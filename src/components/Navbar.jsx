@@ -2,7 +2,7 @@ import { Container, Dropdown, DropdownButton, Row, Col } from "react-bootstrap";
 import { useState } from "react";
 import AddLandmarkModal from "./Modal";
 import "bootstrap/dist/css/bootstrap.min.css";
-import cityData from "./test.json";
+import cityData from "../data.json";
 
 function Navbar({ onCitySelect }) {
     const [city, setCity] = useState(null);

@@ -1,7 +1,7 @@
 import "./Carousel.css";
 import React, { useState, useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
-import data from "./test.json";
+import data from "../data.json";
 import { LoadScript } from "@react-google-maps/api";
 import StreetMap from "./StreetMap";
 import { Container, Col, Row } from "react-bootstrap";
