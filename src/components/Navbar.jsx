@@ -51,7 +51,7 @@ function Navbar({ onCitySelect }) {
                         xs={4}
                         className="align-items-center justify-content-center d-flex"
                     >
-                        <h1>Roots</h1>
+                        <h1>ROOTS</h1>
                     </Col>
                     <Col
                         xs={4}

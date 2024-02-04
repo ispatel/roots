@@ -39,7 +39,6 @@ function MainCarousel({ city }) {
                                         style={{
                                             textAlign: "center",
                                             color: "white",
-                                            fontFamily: "Comic Sans MS",
                                             fontSize: "10vh",
                                         }}
                                     >
@@ -55,7 +54,7 @@ function MainCarousel({ city }) {
                                             <img
                                                 className="shadowed-image"
                                                 src={place.imageUrl}
-                                                alt="African Burial Ground, NYC"
+                                                alt="image"
                                                 width={"100%"}
                                                 height={window.innerHeight / 2}
                                             />
@@ -93,7 +92,7 @@ function MainCarousel({ city }) {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         style={{
-                                            color: hover ? 'blue' : 'gold',
+                                            color: hover ? 'lightblue' : 'gold',
                                             fontStyle: "italic",
                                             fontSize: "3vh",
                                             fontFamily: "Arial",
@@ -113,6 +112,7 @@ function MainCarousel({ city }) {
                                     >
                                         {place.description}
                                     </p>
+                                    <br></br>
                                 </Row>
                             </Container>
                         </div>
