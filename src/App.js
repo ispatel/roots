@@ -1,5 +1,4 @@
 import './App.css';
-import { LoadScript } from '@react-google-maps/api';
 
 import React, { useState } from 'react';
 import MainCarousel from './components/Carousel';

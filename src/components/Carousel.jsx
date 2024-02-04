@@ -2,7 +2,7 @@ import "./Carousel.css";
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import data from "./test.json";
-import { LoadScript, GoogleMap, Map } from "@react-google-maps/api";
+import { LoadScript} from "@react-google-maps/api";
 import StreetMap from "./StreetMap";
 import { Container, Col, Row } from "react-bootstrap";
 
@@ -60,7 +60,7 @@ function MainCarousel({ city }) {
                                                 className="right"
                                                 style={{ padding: "20px" }}
                                             >
-                                                <LoadScript
+                                                {/* <LoadScript
                                                     googleMapsApiKey={key}
                                                     libraries={lib}
                                                 >
@@ -72,7 +72,7 @@ function MainCarousel({ city }) {
                                                         }
                                                         width={"100%"}
                                                     />
-                                                </LoadScript>
+                                                </LoadScript> */}
                                             </div>
                                         </Col>
                                     </Row>

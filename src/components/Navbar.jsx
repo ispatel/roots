@@ -1,5 +1,7 @@
 import { Container, Dropdown, DropdownButton } from "react-bootstrap";
 import { useState } from "react";
+import AddLandmarkModal from "./Modal";
+
 
 function Navbar({ onCitySelect }) {
     const [city, setCity] = useState(null);
@@ -37,11 +39,11 @@ function Navbar({ onCitySelect }) {
                             >
                                 {city}
                             </Dropdown.Item>
-                        );
+                        )
                     })}
                 </DropdownButton>
             </Container>
-            <p>Selected City: {city}</p>
+            <AddLandmarkModal></AddLandmarkModal>
         </div>
     );
 }
