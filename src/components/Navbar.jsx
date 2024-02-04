@@ -1,6 +1,8 @@
-import { Container, Dropdown, DropdownButton } from "react-bootstrap";
+import { Container, Dropdown, DropdownButton, Row, Col } from "react-bootstrap";
 import { useState } from "react";
 import AddLandmarkModal from "./Modal";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 function Navbar({ onCitySelect }) {
@@ -21,11 +23,13 @@ function Navbar({ onCitySelect }) {
                 justifyContent: "space-between",
                 backgroundColor: "#333",
                 color: "white",
-                padding: "15px",
+                padding: "25px",
                 height: "7vh",
             }}
         >
-            <h1>Roots</h1>
+            <Container>
+            <Row className="align-items-center">
+            <Col xs={4} className="align-items-center">
             <Container>
                 <DropdownButton
                     id="dropdown-basic-button"
@@ -43,7 +47,15 @@ function Navbar({ onCitySelect }) {
                     })}
                 </DropdownButton>
             </Container>
+            </Col>
+            <Col xs={4} className="align-items-center">
+            <h1>Roots</h1>
+            </Col>
+            <Col xs={4} className="align-items-center">
             <AddLandmarkModal></AddLandmarkModal>
+            </Col>
+            </Row>
+            </Container>
         </div>
     );
 }
