@@ -24,3 +24,5 @@ yarn-error.log*
 
 .env
 data/__pycache__/
+
+translationkey.json

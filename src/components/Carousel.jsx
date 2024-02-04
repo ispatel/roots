@@ -5,20 +5,6 @@ import data from "../data.json";
 import { LoadScript } from "@react-google-maps/api";
 import StreetMap from "./StreetMap";
 import { Container, Col, Row } from "react-bootstrap";
-const {Translate} = require('@google-cloud/translate').v2;
-const translate = new Translate();
-
-async function translateText(text, target) {
-    // Translates the text into the target language. "text" can be a string for
-    // translating a single piece of text, or an array of strings for translating
-    // multiple texts.
-    let [translations] = await translate.translate(text, target);
-    translations = Array.isArray(translations) ? translations : [translations];
-    console.log('Translations:');
-    translations.forEach((translation, i) => {
-      console.log(`${text[i]} => (${target}) ${translation}`);
-    });
-  }
 
 const key = process.env.REACT_APP_API_KEY;
 const lib = ["places"];
